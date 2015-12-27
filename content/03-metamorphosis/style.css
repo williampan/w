@@ -1,0 +1,37 @@
+/*
+Error: Invalid property: "Text:" (no value).
+        on line 9 of project.txt
+
+4: 
+5: Subtitle: Die Verwandlung
+6: 
+7: ----
+8: 
+9: Text: 
+10: 
+11: A collage prompted by the distortions in time and space present in KafkaΓÇÖs *Metamorphosis*, and quoting the Tang-dynasty quatrain *Moonlit Night* (µ£êσñ£) by Liu Fangping.
+
+Backtrace:
+project.txt:9
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.16/lib/sass/engine.rb:731:in `parse_property'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.16/lib/sass/engine.rb:691:in `parse_property_or_rule'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.16/lib/sass/engine.rb:657:in `parse_line'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.16/lib/sass/engine.rb:535:in `build_tree'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.16/lib/sass/engine.rb:554:in `block in append_children'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.16/lib/sass/engine.rb:553:in `each'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.16/lib/sass/engine.rb:553:in `append_children'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.16/lib/sass/engine.rb:406:in `_to_tree'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.16/lib/sass/engine.rb:378:in `_render_with_sourcemap'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.16/lib/sass/engine.rb:295:in `render_with_sourcemap'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.16/lib/sass/exec/sass_scss.rb:410:in `run'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.16/lib/sass/exec/sass_scss.rb:63:in `process_result'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.16/lib/sass/exec/base.rb:52:in `parse'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.16/lib/sass/exec/base.rb:19:in `parse!'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.16/bin/sass:13:in `<top (required)>'
+C:/Ruby193/bin/sass:23:in `load'
+C:/Ruby193/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid property: \"Text:\" (no value).\A         on line 9 of project.txt\A \A 4: \A 5: Subtitle: Die Verwandlung\A 6: \A 7: ----\A 8: \A 9: Text: \A 10: \A 11: A collage prompted by the distortions in time and space present in KafkaΓÇÖs *Metamorphosis*, and quoting the Tang-dynasty quatrain *Moonlit Night* (µ£êσñ£) by Liu Fangping."; }

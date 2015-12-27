@@ -8,7 +8,7 @@
 	<meta name="description" content="<?php echo $site->description()->html() ?>">
 	<link rel="shortcut icon" type="image/png" href="/w/assets/images/re_favicon.png" />
 
-	<?php echo css("assets/css/style.css") ?>
+	<?php echo css("assets/css/css.css") ?>
 </head>
 <body>
 

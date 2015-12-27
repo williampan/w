@@ -37,8 +37,8 @@ body,
 input,
 textarea {
   font-family: "adobe-text-pro", "source-han-sans", serif;
-  font-size: 1.3em;
-  line-height: 1.3;
+  font-size: 1.5em;
+  line-height: 1.35;
   color: #000; }
 
 a {
@@ -76,7 +76,11 @@ img {
   .caption a:hover,
   .subtitle a:hover {
     color: #07f;
-    background-image: linear-gradient(to bottom, transparent 50%, #07f 50%); }
+    background-image: linear-gradient(to bottom, transparent 50%, #07f 50%);
+    background-position: 0px 90%;
+    background-size: 2px 2px;
+    background-repeat: repeat-x;
+    background-color: transparent; }
 
 a:hover .copy, a:hover .caption, a:hover .subtitle {
   color: #07f; }
@@ -95,26 +99,21 @@ nav {
   position: fixed;
   height: 200px;
   width: 200px;
-  z-index: 5; }
+  z-index: 5;
+  display: block; }
 
 #wei-outline {
   z-index: 6;
+  display: block;
   display: none; }
 
-#nav-left {
-  float: left;
-  text-align: left;
-  z-index: 5; }
-
-#nav-right {
-  float: right;
-  text-align: right;
-  z-index: 5; }
+#top-prev, #top-next {
+  display: none; }
 
 /* Side navigation */
 .side-nav {
   z-index: 2;
-  position: absolute;
+  position: fixed;
   top: 0px;
   bottom: 0px;
   min-height: 100vh;
@@ -189,9 +188,13 @@ a:hover .side-nav span {
 
 a:hover .thumb-image {
   box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.2); }
-a:hover .thumb-title span {
+a:hover .thumb-title span.caption {
   color: #07f;
-  background-image: linear-gradient(to bottom, transparent 50%, #07f 50%); }
+  background-image: linear-gradient(to bottom, transparent 50%, #07f 50%);
+  background-position: 0px 90%;
+  background-size: 2px 2px;
+  background-repeat: repeat-x;
+  background-color: transparent; }
 
 /* Project pages */
 article {
@@ -202,45 +205,122 @@ article {
 .subtitle {
   margin-bottom: 3em; }
 
+.copy + .caption {
+  padding-top: 1em; }
+
 .content p {
-  max-width: 560px;
-  margin: 0 auto 1.3em;
+  max-width: 700px;
+  margin: 0 auto;
   padding-left: 2%;
   text-align: left; }
+.content p + p {
+  text-indent: 2em; }
 .content img {
-  margin: 0 auto 2em;
-  box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.2); }
+  box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.1); }
+.content figure {
+  margin: 0 auto 3em; }
 .content .copy + figure {
-  padding-top: 1em; }
+  padding-top: 4em; }
 
 /* Media queries */
 @media screen and (max-width: 1024px) {
-  #container {
-    padding: 5em 2em 5em; }
+  main {
+    padding: 1em 4em 5em; }
+
+  body,
+  input,
+  textarea {
+    font-size: 1.3em;
+    line-height: 1.3; }
+
+  nav {
+    top: 1em;
+    text-align: center;
+    position: static;
+    top: auto;
+    left: auto;
+    margin: 0 auto; }
+
+  #wei-container {
+    width: 125px;
+    height: 125px;
+    position: static;
+    margin: 0 auto 0;
+    padding-top: 2em; }
+
+  .wei {
+    width: 125px;
+    height: 125px;
+    position: absolute;
+    display: block; }
+
+  #wei-outline {
+    display: none; }
+
+  #top-prev,
+  #top-next {
+    font-size: 1.5em;
+    display: inline;
+    position: absolute;
+    top: 2.5em; }
+    #top-prev:hover,
+    #top-next:hover {
+      color: #07f; }
+
+  #top-prev {
+    left: 3em; }
+
+  #top-next {
+    right: 3em; }
+
+  .side-nav div, .side-nav-left div, .side-nav-right div {
+    width: 0.75em; }
+  .side-nav span, .side-nav-left span, .side-nav-right span {
+    display: none; }
+
+  a:hover .side-nav div {
+    width: 0.75em; }
+
+  .content p {
+    max-width: 500px; } }
+@media screen and (max-width: 512px) {
+  main {
+    padding: 1em 7% 5em; }
+
+  body,
+  input,
+  textarea {
+    font-size: 1.15em;
+    line-height: 1.25; }
+
+  .thumb-image img {
+    max-height: 300px;
+    max-width: 300px; }
 
   nav {
     top: 1em;
     text-align: center; }
 
-  #nav-left,
-  #nav-right {
-    float: none;
-    display: inline;
-    text-align: center; }
+  #wei-container,
+  .wei {
+    width: 100px;
+    height: 100px; }
 
-  #nav-left {
-    margin-right: 1em; }
+  #top-prev {
+    left: 1.5em; }
 
-  .side-nav div {
-    width: 0.75em; }
-  .side-nav span {
+  #top-next {
+    right: 1.5em; }
+
+  .side-nav {
     display: none; }
+    .side-nav div {
+      display: none; }
 
   a:hover .side-nav div {
-    width: 1em; }
+    width: 0.25em; }
 
   .post-content {
     margin: inherit 0 inherit; } }
-/* Retina Display */
 
 /*# sourceMappingURL=css.css.map */

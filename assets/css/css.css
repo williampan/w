@@ -26,20 +26,25 @@ html, body {
   /* To avoid user overrides */ }
 
 ::-moz-selection {
-  background: #bbb;
+  background: #eee;
   color: #000; }
 
 ::selection {
-  background: #bbb;
+  background: #eee;
   color: #000; }
 
 body,
 input,
 textarea {
-  font-family: "adobe-text-pro", "source-han-sans", serif;
+  font-family: "adobe-text-pro", "source-han-sans-traditional", serif;
   font-size: 1.5em;
   line-height: 1.35;
-  color: #000; }
+  color: #000;
+  font-variant-numeric: oldstyle-nums proportional-nums;
+  -moz-font-feature-settings: "onum", "pnum";
+  -ms-font-feature-settings: "onum", "pnum";
+  -webkit-font-feature-settings: "onum", "pnum";
+  font-feature-settings: "onum", "pnum"; }
 
 a {
   color: #000;
@@ -59,7 +64,12 @@ img {
 .title {
   text-transform: uppercase;
   letter-spacing: 2px;
-  margin-bottom: 1em; }
+  margin-bottom: 1em;
+  font-variant-numeric: lining-nums proportional-nums;
+  -moz-font-feature-settings: "lnum", "pnum";
+  -ms-font-feature-settings: "lnum", "pnum";
+  -webkit-font-feature-settings: "lnum", "pnum";
+  font-feature-settings: "lnum", "pnum"; }
 
 .subtitle {
   font-style: italic; }

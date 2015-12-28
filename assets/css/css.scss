@@ -1,10 +1,27 @@
 
 $highlight: #07f;
+$selection: #eee;
 $ghost: #bbb;
 
 @mixin transition($property, $time) {
 	transition: $property $time;
 	-webkit-transition: $property $time;
+}
+
+@mixin onum() {
+    font-variant-numeric: oldstyle-nums proportional-nums;
+    -moz-font-feature-settings: "onum", "pnum";
+    -ms-font-feature-settings: "onum", "pnum";
+    -webkit-font-feature-settings: "onum", "pnum";
+    font-feature-settings: "onum", "pnum";
+}
+
+@mixin lnum() {
+    font-variant-numeric: lining-nums proportional-nums;
+    -moz-font-feature-settings: "lnum", "pnum";
+    -ms-font-feature-settings: "lnum", "pnum";
+    -webkit-font-feature-settings: "lnum", "pnum";
+    font-feature-settings: "lnum", "pnum";
 }
 
 /* Sensible defaults */
@@ -38,21 +55,22 @@ html, body {
 }
 
 ::-moz-selection {
-	background: $ghost;
+	background: $selection;
 	color: #000;
 }
 ::selection {
-	background: $ghost;
+	background: $selection;
 	color: #000;
 }
 
 body,
 input,
 textarea {
-	font-family: "adobe-text-pro", "source-han-sans", serif;
+	font-family: "adobe-text-pro", "source-han-sans-traditional", serif;
 	font-size: 1.5em;
 	line-height: 1.35;
 	color: #000;
+	@include onum();
 }
 
 a {
@@ -79,6 +97,7 @@ img {
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	margin-bottom: 1em;
+	@include lnum();
 }
 
 .subtitle {

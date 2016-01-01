@@ -26,14 +26,10 @@
 				endif;
 		?>
 
-		<nav class="cf">
-			<div id="wei-container">
-				<a href="/w/">
-					<img class="wei" id="wei-outline" src="assets/images/wei-outline.svg" />
-					<img class="wei" id="wei" src="assets/images/wei.svg" />
-				</a>
-			</div>
+
+		<nav>
 			<?php if ($page->template() == "project"): ?>
+
 			<a href="<?php echo $prev->url() ?>" id="top-prev">
 				←
 			</a>&emsp;
@@ -44,6 +40,10 @@
 		</nav>
 
 		<?php if ($page->template() == "project"): ?>
+
+		<nav id="index-link">
+			<a href="/w/">Index</a>
+		</nav>
 
 		<a href="<?php echo $prev->url() ?>">
 			<div class="navigable side-nav side-nav-left">

@@ -105,18 +105,18 @@ img {
 }
 
 
-@mixin link() {
+@mixin link($offset) {
     background-image: linear-gradient(to bottom, transparent 50%, $ghost 50%);
-    background-position: 0px 90%;
+    background-position: 0px $offset;
     background-size: 2px 2px;
     background-repeat: repeat-x;
     background-color: transparent;
 }
 
-@mixin link-hover() {
+@mixin link-hover($offset) {
 	color: $highlight;
 	background-image: linear-gradient(to bottom, transparent 50%, $highlight 50%);
-	background-position: 0px 90%;
+	background-position: 0px $offset;
     background-size: 2px 2px;
     background-repeat: repeat-x;
     background-color: transparent;
@@ -126,9 +126,9 @@ img {
 .caption,
 .subtitle {
 	a {
-		@include link();
+		@include link(90%);
 		&:hover {
-			@include link-hover();
+			@include link-hover(90%);
 		}
 	}
 }
@@ -149,25 +149,47 @@ main {
 	padding: 5em 3em 7em;
 }
 
+
+
 /* Navigation */
 
 nav {
-	position: fixed;
-	left: 3em;
-	top: 1em;
+	height: 0px;
+	position: static;
+	text-align: center;
 }
-	.wei {
-		position: fixed;
-		height: 200px;
-		width: 200px;
-		z-index: 5;
+	// .wei {
+	// 	position: fixed;
+	// 	height: 200px;
+	// 	width: 200px;
+	// 	z-index: 5;
+	// 	display: block;
+	// }
+
+	// #wei-outline {
+	// 	z-index: 6;
+	// 	display: block;
+	// 	display: none;
+	// }
+
+	#index-link {
+		font-family: verdana, sans-serif;
+		font-size: 0.6em;
+		// text-transform: uppercase;
+		letter-spacing: 1px;
+		position: static;
 		display: block;
+		text-align: center;
+		margin: 1em auto 1em;
 	}
 
-	#wei-outline {
-		z-index: 6;
-		display: block;
-		display: none;
+	#index-link a {
+		border-bottom: 1px solid $ghost;
+
+		&:hover {
+			color: $highlight;
+			border-bottom: 1px solid $highlight;
+		}
 	}
 
 	#top-prev, #top-next {
@@ -286,7 +308,7 @@ a:hover {
 	}
 
 	.thumb-title span.caption {
-		@include link-hover();
+		@include link-hover(90%);
 	}
 }
 
@@ -336,7 +358,7 @@ article {
 @media screen and (max-width:1024px) {
 
 	main {
-		padding: 1em 4em 5em;
+		padding: 5em 4em 5em;
 	}
 
 	body,
@@ -379,7 +401,7 @@ article {
 			font-size: 1.5em;
 			display: inline;
 			position: absolute;
-			top: 2.5em;
+			top: 1em;
 
 			&:hover {
 				color: $highlight;
@@ -387,11 +409,11 @@ article {
 		}
 
 		#top-prev {
-			left: 3em;
+			left: 2em;
 		}
 
 		#top-next {
-			right: 3em;
+			right: 2em;
 		}
 
 	.side-nav, .side-nav-left, .side-nav-right {
@@ -415,7 +437,7 @@ article {
 @media screen and (max-width:512px) {
 
 	main {
-		padding: 1em 7% 5em;
+		padding: 4em 7% 5em;
 	}
 
 	body,

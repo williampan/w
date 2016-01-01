@@ -158,24 +158,10 @@ nav {
 	position: static;
 	text-align: center;
 }
-	// .wei {
-	// 	position: fixed;
-	// 	height: 200px;
-	// 	width: 200px;
-	// 	z-index: 5;
-	// 	display: block;
-	// }
-
-	// #wei-outline {
-	// 	z-index: 6;
-	// 	display: block;
-	// 	display: none;
-	// }
 
 	#index-link {
 		font-family: verdana, sans-serif;
 		font-size: 0.6em;
-		// text-transform: uppercase;
 		letter-spacing: 1px;
 		position: static;
 		display: block;
@@ -260,11 +246,6 @@ a:hover {
 			color: $highlight;
 		}
 	}
-}
-
-.navigable.side-nav div,
-.navigable.side-nav div {
-	/* background: #05d; */
 }
 
 /* Index */
@@ -377,25 +358,6 @@ article {
 		margin: 0 auto;
 	}
 
-		#wei-container {
-			width: 125px;
-			height: 125px;
-			position: static;
-			margin: 0 auto 0;
-			padding-top: 2em;
-		}
-
-		.wei {
-			width: 125px;
-			height: 125px;
-			position: absolute;
-			display: block;
-		}
-
-		#wei-outline {
-			display: none;
-		}
-
 		#top-prev,
 		#top-next {
 			font-size: 1.5em;
@@ -456,11 +418,6 @@ article {
 		top: 1em;
 		text-align: center;
 	}
-		#wei-container,
-		.wei {
-			width: 100px;
-			height: 100px;
-		}
 
 		#top-prev {
 			left: 1.5em;

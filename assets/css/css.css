@@ -166,10 +166,6 @@ a:hover .side-nav-right div {
 a:hover .side-nav span {
   color: #07f; }
 
-.navigable.side-nav div,
-.navigable.side-nav div {
-  /* background: #05d; */ }
-
 /* Index */
 /* Disable nav link */
 .home nav #home {
@@ -254,22 +250,6 @@ article {
     left: auto;
     margin: 0 auto; }
 
-  #wei-container {
-    width: 125px;
-    height: 125px;
-    position: static;
-    margin: 0 auto 0;
-    padding-top: 2em; }
-
-  .wei {
-    width: 125px;
-    height: 125px;
-    position: absolute;
-    display: block; }
-
-  #wei-outline {
-    display: none; }
-
   #top-prev,
   #top-next {
     font-size: 1.5em;
@@ -313,11 +293,6 @@ article {
   nav {
     top: 1em;
     text-align: center; }
-
-  #wei-container,
-  .wei {
-    width: 100px;
-    height: 100px; }
 
   #top-prev {
     left: 1.5em; }

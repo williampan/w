@@ -4,24 +4,8 @@ var WP = WP || {};
 
 WP.cosmetics = {
     init: function () {
-        var weiPreload = new Image();
-        weiPreload.src = '/w/assets/images/wei-outline.svg';
 
         $(function () {
-            var wei = $('#wei');
-            var weiOutline = $('#wei-outline');
-
-            wei.mouseenter(function () {
-                wei.fadeOut(250);
-                weiOutline.fadeIn(250);
-                weiOutline.css('display', 'block');
-            });
-
-            weiOutline.mouseleave(function () {
-                weiOutline.fadeOut(250);
-                wei.fadeIn(250);
-            });
-
             var topPrev = $('#top-prev');
             var topNext = $('#top-next');
             var left = $('.side-nav-left');
@@ -38,7 +22,7 @@ WP.cosmetics = {
 
                 hoverElement.mouseleave(function () {
                     cssElement.css(property, '');
-                })
+                });
             }
 
             linkHoverStates(topPrev, leftDiv, 'border-right', '1px solid #07f');
@@ -53,6 +37,14 @@ WP.cosmetics = {
             if ($('.side-nav span').is(':visible')) {
                 $('.side-nav span').hide().delay(500).fadeIn(1000);
             }
+
+            $(window).resize(function() {
+                if ($(window).width() < 1024) {
+                    $('.side-nav span').css('display', 'none');
+                } else if (!$('.side-nav span').is(':visible')) {
+                    $('.side-nav span').fadeIn(1000);
+                }
+            });
 
             $('img.lazy').lazyload({
                 effect: 'fadeIn'

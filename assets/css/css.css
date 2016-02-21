@@ -36,7 +36,7 @@ html, body {
 body,
 input,
 textarea {
-  font-family: "adobe-text-pro", "source-han-sans-traditional", serif;
+  font-family: "adobe-text-pro", serif, "source-han-sans-traditional";
   font-size: 1.5em;
   line-height: 1.35;
   color: #000;
@@ -97,7 +97,7 @@ a:hover .copy, a:hover .caption, a:hover .subtitle {
 
 /* Main container */
 main {
-  padding: 5em 3em 7em; }
+  padding: 4em 3em 10em; }
 
 /* Navigation */
 nav {
@@ -230,6 +230,28 @@ article {
   margin: 0 auto 3em; }
 .content .copy + figure {
   padding-top: 4em; }
+
+.footer {
+  text-align: center;
+  display: block;
+  letter-spacing: 2px; }
+
+.footer-links {
+  font-family: verdana, sans-serif;
+  font-size: 0.6em;
+  letter-spacing: 1px;
+  position: static;
+  margin: 2em auto 7em; }
+
+.footer a + a {
+  margin-left: 10px; }
+
+.footer a {
+  display: inline-block;
+  border-bottom: 1px solid #bbb; }
+  .footer a:hover {
+    color: #07f;
+    border-bottom: 1px solid #07f; }
 
 /* Media queries */
 @media screen and (max-width: 1024px) {

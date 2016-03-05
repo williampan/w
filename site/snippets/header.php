@@ -4,9 +4,14 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-	<title><?php echo $page->title()->html() ?> — <?php echo $site->title()->html() ?></title>
+	<?php if ($page->template() == "project"): ?>
+		<title><?php echo $page->title()->html() ?> — <?php echo $site->title()->html() ?></title>
+	<?php else: ?>
+		<title><?php echo $site->title()->html() ?></title>
+	<?php endif; ?>
+
 	<meta name="description" content="<?php echo $site->description()->html() ?>">
-	<link rel="shortcut icon" type="image/png" href="/w/assets/images/re_favicon.png" />
+	<link rel="shortcut icon" type="image/png" href="assets/images/re_favicon.png" />
 
 	<?php echo css("assets/css/css.css") ?>
 </head>
@@ -42,7 +47,7 @@
 		<?php if ($page->template() == "project"): ?>
 
 		<nav id="index-link">
-			<a href="/w/">Index</a>
+			<a href="<?php echo $site->url() ?>">Index</a>
 		</nav>
 
 		<a href="<?php echo $prev->url() ?>">

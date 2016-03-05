@@ -38,14 +38,37 @@ WP.chineseDate = {
             day: 'numeric'
         };
 
+        // function toLocaleStringSupportsLocales() {
+        //     try {
+        //       new Date().toLocaleString('i');
+        //     } catch (e) {
+        //       return e​.name === 'RangeError';
+        //     }
+        //     return false;
+        // }
+
+        // if (!toLocaleStringSupportsLocales()) {
+        //     WP.chineseDate.date = '';
+        //     return;
+        // }
+
         var westernString = date.toLocaleString('en-US-u-ca-chinese', options);
         var numArray = westernString.split('/');
 
         var mString = numArray[0];
+
+        if (numArray.length < 3) {
+            return;
+        }
+
         var isLeapMonth = (mString.indexOf('bis') > -1); // Leap month, e.g. '9bis'
         var m = parseInt(mString.split('b')[0]);
         var d = parseInt(numArray[1]);
         var y = parseInt(numArray[2]);
+
+
+
+        // document.getElementById('index-link').css('color', 'red');
 
         // Year
 
@@ -445,8 +468,19 @@ WP.cosmetics = {
                 }
             });
 
-            $('img.lazy').lazyload({
-                effect: 'fadeIn'
+
+
+            var wh = $(window).height();
+            var imgs = $('img.lazy');
+
+            imgs.each(function () {
+                var imgPosition = $(this).offset();
+                if (imgPosition.top > wh) {
+
+                    $(this).lazyload({
+                        effect: 'fadeIn'
+                    });
+                }
             });
         });
     }

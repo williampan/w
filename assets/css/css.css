@@ -1,5 +1,19 @@
 /* Sensible defaults */
 @import url(reset.css);
+@font-face {
+  font-family: 'Portrait Text Web';
+  src: url("PortraitText-RegularItalic-Web.eot");
+  src: url("PortraitText-RegularItalic-Web.eot?#iefix") format("embedded-opentype"), url("PortraitText-RegularItalic-Web.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+  font-stretch: normal; }
+@font-face {
+  font-family: 'Portrait Text Web';
+  src: url("PortraitText-Regular-Web.eot");
+  src: url("PortraitText-Regular-Web.eot?#iefix") format("embedded-opentype"), url("PortraitText-Regular-Web.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal; }
 body,
 div,
 article,
@@ -36,8 +50,8 @@ html, body {
 body,
 input,
 textarea {
-  font-family: "adobe-text-pro", serif, "source-han-sans-traditional";
-  font-size: 1.5em;
+  font-family: "Portrait Text Web", serif, "source-han-sans-traditional";
+  font-size: 1.6em;
   line-height: 1.35;
   color: #000;
   font-variant-numeric: oldstyle-nums proportional-nums;
@@ -307,10 +321,6 @@ article {
   textarea {
     font-size: 1.15em;
     line-height: 1.25; }
-
-  .thumb-image img {
-    max-height: 300px;
-    max-width: 300px; }
 
   nav {
     top: 1em;
